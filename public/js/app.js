@@ -36,7 +36,7 @@ function reqListener(){
     viewDivCreate.className = 'views';
     var views = document.createTextNode(aww.data.children[i].data.num_comments);
     viewDivCreate.appendChild(views);
-    document.getElementById('author').appendChild(viewDivCreate);
+    document.getElementsByClassName('article-container')[0].appendChild(viewDivCreate);
   }
 
 }
