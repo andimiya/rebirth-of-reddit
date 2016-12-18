@@ -1,6 +1,14 @@
+
 (function(window){
 
 console.log('Test app.js');
+
+
+// var NowMoment = moment();
+var date = moment.unix(1482099358);
+
+console.log(date, 'date');
+console.log(moment());
 
 function reqListener(){
 
@@ -8,6 +16,7 @@ function reqListener(){
 
 
   for (var i = 0; i < 10; i++){
+
 
     var articleContainer = document.createElement('div');
     articleContainer.className = 'article-container';
@@ -46,6 +55,18 @@ oReq.addEventListener('load', reqListener);
 oReq.open('GET', 'https://www.reddit.com/r/aww/.json');
 oReq.send();
 
+// console.log(getUTCDate(1482081257), 'moment');
+
+// function myFunction() {
+//     var d = new Date(1482081257);
+//     var f = new Date();
+//     var n = d.toUTCString();
+//     console.log(n);
+//     console.log(date.now, 'date now');
+//     // document.getElementById("demo").innerHTML = n;
+
+// }
+// myFunction();
 
 }(window));
 
