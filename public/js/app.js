@@ -21,9 +21,9 @@ function reqListener(){
 
     var awwPic = document.createElement('img');
     awwPic.className = "image-tile";
-    awwPic.setAttribute('src', aww.data.children[i].data.url);
-    awwPic.setAttribute("height", "100");
-    awwPic.setAttribute("width", "100");
+    awwPic.setAttribute('src', aww.data.children[i].data.preview.images[0].source.url);
+    awwPic.setAttribute("height", "170");
+    awwPic.setAttribute("width", "275");
     document.getElementsByClassName('article-container')[0].appendChild(awwPic);
 
     var authorDivCreate = document.createElement('div');
