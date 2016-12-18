@@ -1,11 +1,16 @@
 const gulp = require('gulp');
 const scss = require('gulp-sass');
-const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync');
 
 gulp.task('scss', () => {
   return gulp.src('./scss/*.scss')
     .pipe(scss())
-    .pipe(gulp.dest('./public/styles'))
+    .pipe(gulp.dest('./public/css'))
+})
+
+//watch makes it look at this directory and any directories within this directory. If there are any changes, the watch task triggers and runs the task called 'scss', which updates the app.css file
+gulp.task('watch', ['browserSync'], ()=> {
+  gulp.watch('./scss/**/*.scss', ['scss'])
 })
 
 gulp.task('browserSync', () => {
@@ -15,12 +20,6 @@ gulp.task('browserSync', () => {
     }
   })
 })
-
-//watch makes it look at this directory and any directories within this directory. If there are any changes, the watch task triggers and runs the task called 'scss', which updates the app.css file
-gulp.task('watch', ['browserSync'], ()=> {
-  gulp.watch('./scss/**/*.scss', ['scss'])
-})
-
 
 gulp.task('default', ['watch', 'scss'])   //run the default task, then run the watch task. If anything canges, then run the scss task.
 
