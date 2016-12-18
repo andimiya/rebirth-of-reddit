@@ -11,7 +11,6 @@ function reqListener(){
 
     var articleContainer = document.createElement('div');
     articleContainer.className = 'article-container';
-    console.log(articleContainer);
     document.getElementById('content-container').appendChild(articleContainer);
 
     var titleDivCreate = document.createElement('h1');
@@ -25,13 +24,13 @@ function reqListener(){
     awwPic.setAttribute('src', aww.data.children[i].data.url);
     awwPic.setAttribute("height", "100");
     awwPic.setAttribute("width", "100");
-    document.getElementById('image').appendChild(awwPic);
+    document.getElementsByClassName('article-container')[0].appendChild(awwPic);
 
     var authorDivCreate = document.createElement('div');
     authorDivCreate.className = 'author';
     var author = document.createTextNode(aww.data.children[i].data.author);
     authorDivCreate.appendChild(author);
-    document.getElementById('author').appendChild(authorDivCreate);
+    document.getElementsByClassName('article-container')[0].appendChild(authorDivCreate);
 
     var viewDivCreate = document.createElement('div');
     viewDivCreate.className = 'views';
