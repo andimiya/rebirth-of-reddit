@@ -4,11 +4,7 @@
 console.log('Test app.js');
 
 
-// var NowMoment = moment();
-var date = moment.unix(1482099358);
 
-console.log(date, 'date');
-console.log(moment());
 
 function reqListener(){
 
@@ -28,12 +24,17 @@ function reqListener(){
     titleDivCreate.appendChild(awwTitle);
     document.getElementsByClassName('article-container')[0].appendChild(titleDivCreate);
 
-    var awwPic = document.createElement('img');
-    awwPic.className = "image-tile";
-    awwPic.setAttribute('src', aww.data.children[i].data.preview.images[0].source.url);
-    awwPic.setAttribute("height", "170");
-    awwPic.setAttribute("width", "275");
+    var awwPic = document.createElement('div');
+    awwPic.className = "item-image";
+    document.getElementsByClassName('item-image').style.backgroundImage = 'url(buttons/' + imagePrefix + '.png)';
     document.getElementsByClassName('article-container')[0].appendChild(awwPic);
+
+var string = 'http://www.premiumbeat.com/blog/wp-content/uploads/2012/12/free.jpeg';
+document.getElementById("divtest").style.backgroundImage = "url('" + string + "')";
+document.getElementById("imgtest").src = string;
+
+
+
 
     var authorDivCreate = document.createElement('div');
     authorDivCreate.className = 'author';
@@ -46,27 +47,22 @@ function reqListener(){
     var views = document.createTextNode(aww.data.children[i].data.num_comments);
     viewDivCreate.appendChild(views);
     document.getElementsByClassName('article-container')[0].appendChild(viewDivCreate);
-  }
 
+    var date = moment.unix(aww.data.children[i].data.created_utc);
+    var today = new Date();
+    var duration = document.createTextNode(date.from(today));
+    console.log(duration, 'duration');
+    var dateDivCreate = document.createElement('div');
+    dateDivCreate.className = 'time-ago';
+    dateDivCreate.appendChild(duration);
+    document.getElementsByClassName('article-container')[0].appendChild(dateDivCreate);
+  }
 }
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener('load', reqListener);
 oReq.open('GET', 'https://www.reddit.com/r/aww/.json');
 oReq.send();
-
-// console.log(getUTCDate(1482081257), 'moment');
-
-// function myFunction() {
-//     var d = new Date(1482081257);
-//     var f = new Date();
-//     var n = d.toUTCString();
-//     console.log(n);
-//     console.log(date.now, 'date now');
-//     // document.getElementById("demo").innerHTML = n;
-
-// }
-// myFunction();
 
 }(window));
 
