@@ -24,17 +24,23 @@ function reqListener(){
     titleDivCreate.appendChild(awwTitle);
     document.getElementsByClassName('article-container')[0].appendChild(titleDivCreate);
 
-    var awwPic = document.createElement('div');
-    awwPic.className = "item-image";
-    document.getElementsByClassName('item-image').style.backgroundImage = 'url(buttons/' + imagePrefix + '.png)';
-    document.getElementsByClassName('article-container')[0].appendChild(awwPic);
+    // var awwPic = document.createElement('div');
+    // awwPic.className = "item-image";
+    // document.body.style.backgroundImage = "url('aww.data.children[i].data.preview.images[0].source.url')";
+    // document.getElementById(tabName).style.backgroundImage = 'url(buttons/' + imagePrefix + '.png)';
 
-var string = 'http://www.premiumbeat.com/blog/wp-content/uploads/2012/12/free.jpeg';
-document.getElementById("divtest").style.backgroundImage = "url('" + string + "')";
-document.getElementById("imgtest").src = string;
+    // awwPic.setAttribute("height", "170");
+    // awwPic.setAttribute("width", "275");
+    // document.getElementsByClassName('article-container')[0].appendChild(awwPic);
 
+var imageDivCreate = document.createElement('div');
+imageDivCreate.className = "item-image";
+var string = aww.data.children[i].data.preview.images[0].source.url;
+imageDivCreate.style.backgroundImage = "url('" + string + "')";
+// console.log(temp, 'temp');
 
-
+// imageDivCreate.appendChild(temp);
+// document.getElementsByClassName('item-image')[0].appendChild(imageDivCreate);
 
     var authorDivCreate = document.createElement('div');
     authorDivCreate.className = 'author';
@@ -51,7 +57,6 @@ document.getElementById("imgtest").src = string;
     var date = moment.unix(aww.data.children[i].data.created_utc);
     var today = new Date();
     var duration = document.createTextNode(date.from(today));
-    console.log(duration, 'duration');
     var dateDivCreate = document.createElement('div');
     dateDivCreate.className = 'time-ago';
     dateDivCreate.appendChild(duration);
