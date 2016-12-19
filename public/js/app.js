@@ -35,9 +35,14 @@ function reqListener(){
 
 var imageDivCreate = document.createElement('div');
 imageDivCreate.className = "item-image";
-var string = aww.data.children[i].data.preview.images[0].source.url;
-imageDivCreate.style.backgroundImage = "url('" + string + "')";
-// console.log(temp, 'temp');
+// var string = aww.data.children[i].data.preview.images[0].source.url;
+console.log(imageDivCreate);
+
+var x = document.getElementsByClassName('')
+
+    document.getElementsByClassName('article-container')[1].style.backgroundImage = "url('http://i.imgur.com/PYnrWZY.jpg')";
+
+
 
 // imageDivCreate.appendChild(temp);
 // document.getElementsByClassName('item-image')[0].appendChild(imageDivCreate);

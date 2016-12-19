@@ -3,3 +3,19 @@ body {
 
 h1 {
   font-size: 12px; }
+
+#item-image {
+  width: 100%;
+  height: 500px;
+  /* you should change this later. this is for testing */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.item-image {
+  width: 100%;
+  height: 500px;
+  /* you should change this later. this is for testing */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
