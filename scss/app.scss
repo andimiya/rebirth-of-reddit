@@ -19,15 +19,15 @@ body {
 .nav ul {
   border: 10px solid orange;
   list-style: none;
-  background-color: gray;
+  background-color: #2C2C2E;
   text-align: center;
 }
 
 .nav li {
   display: inline-block;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
   font-weight: normal;
+  color: #66676A;
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
@@ -37,6 +37,8 @@ body {
   border: 10px solid pink;
   display: flex;
   justify-content: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
 }
 
 .articles-holder{
@@ -45,17 +47,26 @@ body {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
+  align-content: center;
 }
 
 .article-container{
   border: 10px solid yellow;
   background-color: white;
-  flex: 0 0 320px;
+  // flex: 0 0 320px;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 0 0 48%;
 }
 
 .headline{
   background-color: blue;
   flex: 0 0 280px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 10px;
+
 }
 
 .item-image{
@@ -64,18 +75,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
+
 }
 
 .author{
   background-color: green;
+  font-size: 0.8rem;
+  margin: 5px;
 }
 
 .views{
   background-color: red;
+  font-size: 0.8rem;
 }
+
 
 .time-ago{
   background-color: purple;
+  font-size: 0.7rem;
+
 }
 
 
