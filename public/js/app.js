@@ -5,13 +5,15 @@ function reqListener(){
 
   var aww = JSON.parse(this.responseText);
 
+    var articlesHolder = document.createElement('div');
+    articlesHolder.className = 'articles-holder';
+    document.getElementById('content-container').appendChild(articlesHolder);
 
   for (var i = 1; i < 10; i++){
 
-
     var articleContainer = document.createElement('div');
     articleContainer.className = 'article-container';
-    document.getElementById('content-container').appendChild(articleContainer);
+    articlesHolder.appendChild(articleContainer);
 
     //Image
     var image = document.createElement('div');

@@ -90,7 +90,13 @@ body {
 #content-container {
   border: 10px solid pink;
   display: flex;
-  justify-content: center;
+  justify-content: center; }
+
+.articles-holder {
+  border: 10px solid black;
+  flex: 0 0 720px;
+  display: flex;
+  justify-content: space-between;
   flex-flow: row wrap; }
 
 .article-container {
