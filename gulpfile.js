@@ -10,6 +10,18 @@ gulp.task('scss', () => {
     .pipe(gulp.dest('./public/css'));
 });
 
+gulp.task('autoprefixer', function () {
+    var postcss      = require('gulp-postcss');
+    var sourcemaps   = require('gulp-sourcemaps');
+    var autoprefixer = require('autoprefixer');
+
+    return gulp.src('./src/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dest'));
+});
+
 //watch makes it look at this directory and any directories within this directory. If there are any changes, the watch task triggers and runs the task called 'scss', which updates the app.css file
 gulp.task('watch', ['browserSync'], ()=> {
   gulp.watch('./scss/**/*.scss', ['scss']);
