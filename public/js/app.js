@@ -13,12 +13,6 @@ function reqListener(){
     articleContainer.className = 'article-container';
     document.getElementById('content-container').appendChild(articleContainer);
 
-    //Article Title
-    var articleTitle = document.createElement('div');
-    articleTitle.className = 'headline';
-    articleTitle.innerHTML = aww.data.children[i].data.title;
-    articleContainer.appendChild(articleTitle);
-
     //Image
     var image = document.createElement('div');
     image.className = 'item-image';
@@ -26,18 +20,25 @@ function reqListener(){
     articleContainer.appendChild(image);
     image.style.backgroundImage = "url(" + url + ")";
 
+    //Article Title
+    var articleTitle = document.createElement('div');
+    articleTitle.className = 'headline';
+    articleTitle.innerHTML = aww.data.children[i].data.title;
+    articleContainer.appendChild(articleTitle);
 
+    //Author
     var author = document.createElement('div');
     author.className = 'author';
     author.innerHTML = aww.data.children[i].data.author;
     articleContainer.appendChild(author);
 
-
+    //Views
     var views = document.createElement('div');
     views.className = 'views';
     views.innerHTML = aww.data.children[i].data.num_comments;
     articleContainer.appendChild(views);
 
+    //Date
     var dateDivCreate = document.createElement('div');
     dateDivCreate.className = 'time-ago';
     var date = moment.unix(aww.data.children[i].data.created_utc);
