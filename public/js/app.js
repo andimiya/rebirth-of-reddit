@@ -1,11 +1,6 @@
 
 (function(window){
 
-console.log('Test app.js');
-
-
-
-
 function reqListener(){
 
   var aww = JSON.parse(this.responseText);
@@ -43,11 +38,11 @@ function reqListener(){
     views.innerHTML = aww.data.children[i].data.num_comments;
     articleContainer.appendChild(views);
 
+    var dateDivCreate = document.createElement('div');
+    dateDivCreate.className = 'time-ago';
     var date = moment.unix(aww.data.children[i].data.created_utc);
     var today = new Date();
     var duration = document.createTextNode(date.from(today));
-    var dateDivCreate = document.createElement('div');
-    dateDivCreate.className = 'time-ago';
     dateDivCreate.innerHTML = duration;
     articleContainer.appendChild(duration);
   }
