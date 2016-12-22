@@ -16,11 +16,13 @@ body {
   height: 60px;
 }
 
+
 .nav ul {
   // border: 10px solid orange;
   list-style: none;
   background-color: #2C2C2E;
   text-align: center;
+  margin: 0 0 40px 0;
 }
 
 .nav li {
@@ -28,9 +30,7 @@ body {
   font-family: 'Oswald', sans-serif;
   font-weight: normal;
   color: #66676A;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
+  line-height: 50px;
 }
 
 .nav li:after {
@@ -53,7 +53,7 @@ body {
   // border: 10px solid black;
   flex: 0 0 720px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-flow: row wrap;
   align-content: center;
 }
@@ -61,17 +61,16 @@ body {
 .article-container{
   // border: 10px solid yellow;
   background-color: white;
-  justify-content: center;
   box-sizing: border-box;
-  flex: 0 0 48%;
-
+  flex: 0 0 35%;
+  margin: 15px 15px 15px 15px;
 }
 
 .headline{
   // background-color: blue;
   flex: 0 0 48%;
   font-family: 'Oswald', sans-serif;
-  margin: 10px 35px 10px 35px;
+  margin: 10px 25px 10px 25px;
 }
 
 .item-image{
@@ -79,13 +78,13 @@ body {
   height: 170px; /* you should change this later. this is for testing */
   background-size: cover;
   background-repeat: no-repeat;
-  margin: auto;
+  margin: 25px 25px auto 25px;
 }
 
 .author{
   // background-color: green;
   font-size: 0.8rem;
-  margin: 10px 35px 50px 35px;
+  margin: 10px 25px 50px 25px;
 }
 
 .views{
