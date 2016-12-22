@@ -31,23 +31,23 @@ function reqListener(){
     //Author
     var author = document.createElement('div');
     author.className = 'author';
-    author.innerHTML = aww.data.children[i].data.author;
+    author.innerHTML = `by ${aww.data.children[i].data.author}`;
     articleContainer.appendChild(author);
 
-    //Views
-    var views = document.createElement('div');
+    //Views - Author is the Parent
+    var views = document.createElement('span');
     views.className = 'views';
-    views.innerHTML = aww.data.children[i].data.num_comments;
-    articleContainer.appendChild(views);
+    views.innerHTML = `${aww.data.children[i].data.num_comments} comments`;
+    author.appendChild(views);
 
-    //Date
-    var dateDivCreate = document.createElement('div');
+    //Date - Author is the Parent
+    var dateDivCreate = document.createElement('span');
     dateDivCreate.className = 'time-ago';
     var date = moment.unix(aww.data.children[i].data.created_utc);
     var today = new Date();
     var duration = document.createTextNode(date.from(today));
     dateDivCreate.innerHTML = duration;
-    articleContainer.appendChild(duration);
+    author.appendChild(duration);
   }
 }
 

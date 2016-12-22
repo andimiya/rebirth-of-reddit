@@ -7,7 +7,7 @@ body {
 }
 
 .upper-nav{
-  border: 10px solid blue;
+  // border: 10px solid blue;
   background-color: white;
   background-position: center center;
   background-image: url('/assets/header_bg.svg');
@@ -17,7 +17,7 @@ body {
 }
 
 .nav ul {
-  border: 10px solid orange;
+  // border: 10px solid orange;
   list-style: none;
   background-color: #2C2C2E;
   text-align: center;
@@ -33,8 +33,16 @@ body {
   border-bottom: 1px solid #888;
 }
 
+.nav li:after {
+  content: " •";
+}
+
+.nav li:last-child:after{
+  content: "";
+}
+
 #content-container{
-  border: 10px solid pink;
+  // border: 10px solid pink;
   display: flex;
   justify-content: center;
   font-family: 'Lato', sans-serif;
@@ -42,7 +50,7 @@ body {
 }
 
 .articles-holder{
-  border: 10px solid black;
+  // border: 10px solid black;
   flex: 0 0 720px;
   display: flex;
   justify-content: space-between;
@@ -51,7 +59,7 @@ body {
 }
 
 .article-container{
-  border: 10px solid yellow;
+  // border: 10px solid yellow;
   background-color: white;
   // flex: 0 0 320px;
   justify-content: center;
@@ -60,11 +68,9 @@ body {
 }
 
 .headline{
-  background-color: blue;
+  // background-color: blue;
   flex: 0 0 280px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
   margin: 10px;
 
 }
@@ -75,23 +81,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
-
 }
 
 .author{
-  background-color: green;
+  // background-color: green;
   font-size: 0.8rem;
-  margin: 5px;
+  margin: 10px;
 }
 
 .views{
-  background-color: red;
+  // background-color: red;
   font-size: 0.8rem;
 }
 
 
 .time-ago{
-  background-color: purple;
+  // background-color: purple;
   font-size: 0.7rem;
 
 }

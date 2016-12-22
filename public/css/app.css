@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -64,7 +65,6 @@ body {
   background: url("/assets/bg.jpg"); }
 
 .upper-nav {
-  border: 10px solid blue;
   background-color: white;
   background-position: center center;
   background-image: url("/assets/header_bg.svg");
@@ -73,7 +73,6 @@ body {
   height: 60px; }
 
 .nav ul {
-  border: 10px solid orange;
   list-style: none;
   background-color: #2C2C2E;
   text-align: center; }
@@ -87,15 +86,19 @@ body {
   height: 40px;
   border-bottom: 1px solid #888; }
 
+.nav li:after {
+  content: " •"; }
+
+.nav li:last-child:after {
+  content: ""; }
+
 #content-container {
-  border: 10px solid pink;
   display: flex;
   justify-content: center;
   font-family: 'Lato', sans-serif;
   font-weight: normal; }
 
 .articles-holder {
-  border: 10px solid black;
   flex: 0 0 720px;
   display: flex;
   justify-content: space-between;
@@ -103,18 +106,14 @@ body {
   align-content: center; }
 
 .article-container {
-  border: 10px solid yellow;
   background-color: white;
   justify-content: center;
   box-sizing: border-box;
   flex: 0 0 48%; }
 
 .headline {
-  background-color: blue;
   flex: 0 0 280px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
   margin: 10px; }
 
 .item-image {
@@ -126,14 +125,11 @@ body {
   margin: auto; }
 
 .author {
-  background-color: green;
   font-size: 0.8rem;
-  margin: 5px; }
+  margin: 10px; }
 
 .views {
-  background-color: red;
   font-size: 0.8rem; }
 
 .time-ago {
-  background-color: purple;
   font-size: 0.7rem; }
