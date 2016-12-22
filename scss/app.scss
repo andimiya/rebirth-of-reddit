@@ -61,18 +61,17 @@ body {
 .article-container{
   // border: 10px solid yellow;
   background-color: white;
-  // flex: 0 0 320px;
   justify-content: center;
   box-sizing: border-box;
   flex: 0 0 48%;
+
 }
 
 .headline{
   // background-color: blue;
-  flex: 0 0 280px;
+  flex: 0 0 48%;
   font-family: 'Oswald', sans-serif;
-  margin: 10px;
-
+  margin: 10px 35px 10px 35px;
 }
 
 .item-image{
@@ -86,7 +85,7 @@ body {
 .author{
   // background-color: green;
   font-size: 0.8rem;
-  margin: 10px;
+  margin: 10px 35px 50px 35px;
 }
 
 .views{

@@ -112,9 +112,9 @@ body {
   flex: 0 0 48%; }
 
 .headline {
-  flex: 0 0 280px;
+  flex: 0 0 48%;
   font-family: 'Oswald', sans-serif;
-  margin: 10px; }
+  margin: 10px 35px 10px 35px; }
 
 .item-image {
   width: 280px;
@@ -126,7 +126,7 @@ body {
 
 .author {
   font-size: 0.8rem;
-  margin: 10px; }
+  margin: 10px 35px 50px 35px; }
 
 .views {
   font-size: 0.8rem; }
