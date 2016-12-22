@@ -11,61 +11,45 @@ function reqListener(){
   var aww = JSON.parse(this.responseText);
 
 
-  for (var i = 0; i < 10; i++){
+  for (var i = 1; i < 10; i++){
 
 
     var articleContainer = document.createElement('div');
     articleContainer.className = 'article-container';
     document.getElementById('content-container').appendChild(articleContainer);
 
-    var titleDivCreate = document.createElement('h1');
-    titleDivCreate.className = 'headline';
-    var awwTitle = document.createTextNode(aww.data.children[i].data.title);
-    titleDivCreate.appendChild(awwTitle);
-    document.getElementsByClassName('article-container')[0].appendChild(titleDivCreate);
+    //Article Title
+    var articleTitle = document.createElement('div');
+    articleTitle.className = 'headline';
+    articleTitle.innerHTML = aww.data.children[i].data.title;
+    articleContainer.appendChild(articleTitle);
 
-    // var awwPic = document.createElement('div');
-    // awwPic.className = "item-image";
-    // document.body.style.backgroundImage = "url('aww.data.children[i].data.preview.images[0].source.url')";
-    // document.getElementById(tabName).style.backgroundImage = 'url(buttons/' + imagePrefix + '.png)';
-
-    // awwPic.setAttribute("height", "170");
-    // awwPic.setAttribute("width", "275");
-    // document.getElementsByClassName('article-container')[0].appendChild(awwPic);
-
-var imageDivCreate = document.createElement('div');
-imageDivCreate.className = "item-image";
-// var string = aww.data.children[i].data.preview.images[0].source.url;
-console.log(imageDivCreate);
-
-var x = document.getElementsByClassName('')
-
-    document.getElementsByClassName('article-container')[1].style.backgroundImage = "url('http://i.imgur.com/PYnrWZY.jpg')";
+    //Image
+    var image = document.createElement('div');
+    image.className = 'item-image';
+    var url = aww.data.children[i].data.preview.images[0].source.url;
+    articleContainer.appendChild(image);
+    image.style.backgroundImage = "url(" + url + ")";
 
 
+    var author = document.createElement('div');
+    author.className = 'author';
+    author.innerHTML = aww.data.children[i].data.author;
+    articleContainer.appendChild(author);
 
-// imageDivCreate.appendChild(temp);
-// document.getElementsByClassName('item-image')[0].appendChild(imageDivCreate);
 
-    var authorDivCreate = document.createElement('div');
-    authorDivCreate.className = 'author';
-    var author = document.createTextNode(aww.data.children[i].data.author);
-    authorDivCreate.appendChild(author);
-    document.getElementsByClassName('article-container')[0].appendChild(authorDivCreate);
-
-    var viewDivCreate = document.createElement('div');
-    viewDivCreate.className = 'views';
-    var views = document.createTextNode(aww.data.children[i].data.num_comments);
-    viewDivCreate.appendChild(views);
-    document.getElementsByClassName('article-container')[0].appendChild(viewDivCreate);
+    var views = document.createElement('div');
+    views.className = 'views';
+    views.innerHTML = aww.data.children[i].data.num_comments;
+    articleContainer.appendChild(views);
 
     var date = moment.unix(aww.data.children[i].data.created_utc);
     var today = new Date();
     var duration = document.createTextNode(date.from(today));
     var dateDivCreate = document.createElement('div');
     dateDivCreate.className = 'time-ago';
-    dateDivCreate.appendChild(duration);
-    document.getElementsByClassName('article-container')[0].appendChild(dateDivCreate);
+    dateDivCreate.innerHTML = duration;
+    articleContainer.appendChild(duration);
   }
 }
 
