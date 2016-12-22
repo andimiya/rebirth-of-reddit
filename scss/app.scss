@@ -18,14 +18,28 @@ h1 {
 
 #content-container{
   border: 10px solid pink;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  // align-items: stretch;
+  // margin: auto;
 }
 
 .article-container{
   border: 10px solid yellow;
+  background-color: white;
 }
 
 .headline{
   background-color: blue;
+}
+
+.item-image{
+  width: 280px;
+  height: 170px; /* you should change this later. this is for testing */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .author{
@@ -40,13 +54,7 @@ h1 {
   background-color: purple;
 }
 
-.item-image{
-  width: 280px;
-  height: 170px; /* you should change this later. this is for testing */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
+
 
 
 
