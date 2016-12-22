@@ -1,8 +1,9 @@
 body {
   background: url("/assets/bg.jpg"); }
 
-h1 {
-  font-size: 12px; }
+header {
+  font-size: 12px;
+  background: url("/assets/header_bg.svg"); }
 
 #content-container {
   border: 10px solid pink;
@@ -12,18 +13,20 @@ h1 {
 
 .article-container {
   border: 10px solid yellow;
-  background-color: white; }
+  background-color: white;
+  flex: 1 0 320px; }
 
 .headline {
-  background-color: blue; }
+  background-color: blue;
+  flex: 1 0 280px; }
 
 .item-image {
   width: 280px;
   height: 170px;
   /* you should change this later. this is for testing */
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin: auto; }
 
 .author {
   background-color: green; }
