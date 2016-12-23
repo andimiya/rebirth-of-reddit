@@ -1,6 +1,3 @@
-
-(function(window){
-
 function reqListener(){
 
   var aww = JSON.parse(this.responseText);
@@ -61,32 +58,12 @@ oReq.addEventListener('load', reqListener);
 oReq.open('GET', 'https://www.reddit.com/r/space/.json');
 oReq.send();
 
-document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
-function myFunction() {
-  var oReq = new XMLHttpRequest();
-  oReq.addEventListener('load', reqListener);
-  oReq.open('GET', 'https://www.reddit.com/r/space/.json');
-  oReq.send();
+
+var randomMenu = document.getElementById('random').addEventListener('click', () => {
+  document.getElementById('content-container').innerHTML = randomMenu;
+  rReq = new XMLHttpRequest();
+  rReq.addEventListener('load', reqListener);
+  rReq.open('GET', 'https://www.reddit.com/r/space/.json');
+  rReq.send();
   console.log('yes');
-  }
-
-// document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
-//   function myFunction() {
-//     var xhr = new XMLHttpRequest();
-//     xhr.addEventListener('load', reqListener);
-//     xhr.open('GET', 'https://www.reddit.com/r/space/.json');
-//     xhr.send();
-//     console.log('yes');
-//   }
-
-// document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
-// function myFunction() {
-//   var oReq = new XMLHttpRequest();
-//   oReq.addEventListener('load', reqListener);
-//   oReq.open('GET', 'https://www.reddit.com/r/space/.json');
-//   oReq.send();
-// }
-
-
-
-}(window));
+});
