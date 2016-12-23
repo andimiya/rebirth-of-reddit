@@ -56,11 +56,37 @@ function reqListener(){
   }
 }
 
-
 var oReq = new XMLHttpRequest();
 oReq.addEventListener('load', reqListener);
-oReq.open('GET', 'https://www.reddit.com/r/aww/.json');
+oReq.open('GET', 'https://www.reddit.com/r/space/.json');
 oReq.send();
 
-}(window));
+document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
+function myFunction() {
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener('load', reqListener);
+  oReq.open('GET', 'https://www.reddit.com/r/space/.json');
+  oReq.send();
+  console.log('yes');
+  }
 
+// document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
+//   function myFunction() {
+//     var xhr = new XMLHttpRequest();
+//     xhr.addEventListener('load', reqListener);
+//     xhr.open('GET', 'https://www.reddit.com/r/space/.json');
+//     xhr.send();
+//     console.log('yes');
+//   }
+
+// document.getElementsByClassName('random')[0].addEventListener('click', myFunction);
+// function myFunction() {
+//   var oReq = new XMLHttpRequest();
+//   oReq.addEventListener('load', reqListener);
+//   oReq.open('GET', 'https://www.reddit.com/r/space/.json');
+//   oReq.send();
+// }
+
+
+
+}(window));
