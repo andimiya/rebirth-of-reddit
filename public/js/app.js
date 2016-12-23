@@ -1,15 +1,19 @@
 function reqListener(){
 
+  document.getElementById('content-container').innerHTML = "";
+
   var aww = JSON.parse(this.responseText);
 
     var articlesHolder = document.createElement('div');
     articlesHolder.className = 'articles-holder';
     document.getElementById('content-container').appendChild(articlesHolder);
+    console.log(articlesHolder);
 
   for (var i = 1; i < 30; i++){
 
     //Only Show Articles with JPGs, not GIFS
     var url = aww.data.children[i].data.preview.images[0].source.url;
+    console.log(url);
     if (url.match(/\.(jpg)/g)) {
 
       var articleContainer = document.createElement('div');
@@ -58,30 +62,23 @@ oReq.addEventListener('load', reqListener);
 oReq.open('GET', 'https://www.reddit.com/r/space/.json');
 oReq.send();
 
-
-var randomMenu = document.getElementById('random').addEventListener('click', () => {
-  document.getElementById('content-container').innerHTML = randomMenu;
-  rReq = new XMLHttpRequest();
+document.getElementById('random').addEventListener('click', () => {
+  var rReq = new XMLHttpRequest();
   rReq.addEventListener('load', reqListener);
   rReq.open('GET', 'https://www.reddit.com/r/space/.json');
   rReq.send();
-  console.log('yes');
 });
 
-var randomMenu = document.getElementById('my-boards').addEventListener('click', () => {
-  document.getElementById('content-container').innerHTML = randomMenu;
-  rReq = new XMLHttpRequest();
-  rReq.addEventListener('load', reqListener);
-  rReq.open('GET', 'https://www.reddit.com/r/aww/.json');
-  rReq.send();
-  console.log('yes');
+document.getElementById('my-boards').addEventListener('click', () => {
+  var kReq = new XMLHttpRequest();
+  kReq.addEventListener('load', reqListener);
+  kReq.open('GET', 'https://www.reddit.com/r/aww/.json');
+  kReq.send();
 });
 
-var randomMenu = document.getElementById('get-the-app').addEventListener('click', () => {
-  document.getElementById('content-container').innerHTML = randomMenu;
-  rReq = new XMLHttpRequest();
-  rReq.addEventListener('load', reqListener);
-  rReq.open('GET', 'https://www.reddit.com/r/pics/.json');
-  rReq.send();
-  console.log('yes');
+document.getElementById('get-the-app').addEventListener('click', () => {
+  var pReq = new XMLHttpRequest();
+  pReq.addEventListener('load', reqListener);
+  pReq.open('GET', 'https://www.reddit.com/r/pics/.json');
+  pReq.send();
 });
