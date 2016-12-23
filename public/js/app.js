@@ -67,3 +67,21 @@ var randomMenu = document.getElementById('random').addEventListener('click', () 
   rReq.send();
   console.log('yes');
 });
+
+var randomMenu = document.getElementById('my-boards').addEventListener('click', () => {
+  document.getElementById('content-container').innerHTML = randomMenu;
+  rReq = new XMLHttpRequest();
+  rReq.addEventListener('load', reqListener);
+  rReq.open('GET', 'https://www.reddit.com/r/aww/.json');
+  rReq.send();
+  console.log('yes');
+});
+
+var randomMenu = document.getElementById('get-the-app').addEventListener('click', () => {
+  document.getElementById('content-container').innerHTML = randomMenu;
+  rReq = new XMLHttpRequest();
+  rReq.addEventListener('load', reqListener);
+  rReq.open('GET', 'https://www.reddit.com/r/pics/.json');
+  rReq.send();
+  console.log('yes');
+});
