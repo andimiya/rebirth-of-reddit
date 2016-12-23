@@ -59,7 +59,7 @@ function reqListener(){
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener('load', reqListener);
-oReq.open('GET', 'https://www.reddit.com/r/space/.json');
+oReq.open('GET', 'https://www.reddit.com/r/aww/.json');
 oReq.send();
 
 document.getElementById('random').addEventListener('click', () => {
