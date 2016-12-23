@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   height: 60px;
 
-  //properties for large sizes
+  //properties for medium sizes
   @media only screen and (min-width: 725px) {
     background-position: center center;
     background-image: url('/assets/header_bg.svg');
@@ -70,7 +70,7 @@ body {
 }
 
 a {
-  color: #66676A;
+  color: #797A7D;
   text-decoration: none;
 }
 
@@ -86,27 +86,29 @@ a:hover{
 }
 
 .articles-holder{
+  border: 10px solid blue;
   flex: 0 0 425px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   align-content: center;
 
+  //properties for medium sizes
   @media only screen and (min-width: 675px){
-    flex: 0 0 720px;
+    flex: 0 0 800px;
   }
 }
 
 .article-container{
-
+  border: 10px solid yellow;
   background-color: white;
   box-sizing: border-box;
   flex: 0 0 460px;
   margin: 15px 15px 15px 15px;
 
-  //for medium screen
+  //properties for medium sizes
   @media only screen and (min-width: 725px) {
-    flex: 0 0 35%;
+    flex: 0 0 100px;
   }
 }
 
@@ -118,28 +120,49 @@ a:hover{
   flex: 0 0 48%;
   font-family: 'Oswald', sans-serif;
   margin: 10px 25px 10px 25px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 
+  //properties for medium sizes
   @media only screen and (min-width: 725px) {
-    flex: 0 0 35%;
+    font-size: 1rem;
   }
 }
 
 .item-image{
-  width: 280px;
-  height: 170px;
+  border: 10px solid red;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 420px;
+  height: 270px;
   margin: 25px 25px auto 25px;
+
+  //properties for medium sizes
+  @media only screen and (min-width: 725px){
+    width: 280px;
+    height: 170px;
+    margin: 25px 25px auto 25px;
+  }
 }
 
 .author{
-  font-size: 0.8rem;
   margin: 10px 25px 50px 25px;
   color: #6E6F72;
+  font-size: 1rem;
+
+  //properties for medium sizes
+  @media only screen and (min-width: 725px){
+    font-size: 0.8rem;
+  }
 }
 
 .views{
-  font-size: 0.8rem;
+  font-size: 1rem;
+
+  //properties for medium sizes
+  @media only screen and (min-width: 725px){
+    font-size: 0.8rem;
+  }
 }
 
 .views:after {
