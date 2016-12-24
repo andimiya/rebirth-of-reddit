@@ -27,12 +27,12 @@ body {
   width: 33px;
   height: 30px;
   font-size: 2.2rem;
+  line-height: 28px;
   text-align: center;
+  vertical-align: middle;
   color: #AF3821;
   background-position: right;
   display: inline-block;
-  line-height: 28px;
-  vertical-align: middle;
   float: right;
   margin: 15px 25px 0 0;
 }
@@ -86,7 +86,6 @@ a:hover{
 }
 
 .articles-holder{
-  border: 10px solid blue;
   flex: 0 0 425px;
   display: flex;
   justify-content: center;
@@ -100,7 +99,6 @@ a:hover{
 }
 
 .article-container{
-  border: 10px solid yellow;
   background-color: white;
   box-sizing: border-box;
   flex: 0 0 460px;
@@ -130,7 +128,6 @@ a:hover{
 }
 
 .item-image{
-  border: 10px solid red;
   background-size: cover;
   background-repeat: no-repeat;
   width: 420px;

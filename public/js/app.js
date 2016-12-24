@@ -1,5 +1,6 @@
 function reqListener(){
 
+  //Clears content each time reqListener is triggered (on menu button click)
   document.getElementById('content-container').innerHTML = "";
 
   var aww = JSON.parse(this.responseText);
